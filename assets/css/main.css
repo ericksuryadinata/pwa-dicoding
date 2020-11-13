@@ -1,0 +1,59 @@
+.img {
+  width: 100%;
+}
+.mt-1 {
+  margin-top: 1em;
+}
+
+.hero-section {
+  position: relative;
+  height: 600px;
+  background: #3E92CC;
+  color: #ffffff;
+  padding-top: 1em !important;
+}
+
+.svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.no-margin{
+  margin: 0 !important;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.custom-nav-color{
+  background-color: #007EA7 !important;
+}
+
+.teams-card{
+  height: 200px !important;
+  width: 200px !important;
+  margin: 0 auto;
+}
+
+.small-teams-card{
+  width: 25px !important;
+  height: 25px !important;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .brand-logo {
+    font-size: 1.5rem !important;
+  }
+}
