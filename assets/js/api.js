@@ -1,3 +1,4 @@
+/* global M */
 const BASEURL = 'https://api.football-data.org/'
 const HEADERS = new Headers()
 HEADERS.append('X-Auth-Token', '2d8e9f81155e46d6aa7ffe8e7032c6de')
@@ -49,7 +50,7 @@ function onFavorite (selector, team) {
     getIndexedId(team.id) // eslint-disable-line no-undef
       .then(t => {
         if (t) {
-          alert('team is already favorited') // eslint-disable-line no-alert
+          M.toast({ html: 'team is already favorited' }) // eslint-disable-line no-alert
         } else {
           saveTeam(team) // eslint-disable-line no-undef
         }
@@ -196,39 +197,50 @@ function getSavedTeams () {
   getAll() // eslint-disable-line no-undef
     .then(teams => {
       let html = ''
-      teams.forEach(t => {
-        html += `
-          <div class="row">
-            <div class="col s12 m12">
-              <div class="card">
-                <div class="card-image grey lighten-4">
-                  <img src="${t.crestUrl}" class="teams-card">
-                  <span class="card-title black-text">${t.name}</span>
-                </div>
-                <div class="card-content black-text">
-                  <div class="row">
-                    <div class="col sm12 m6">
-                      <p>Nama : ${t.name}</p>
-                      <p>Didirikan : ${t.founded}</p>
-                      <p>Alamat : ${t.address}</p>
-                      <p>Email : ${t.email}</p>
-                      <p>Telepon : ${t.founded}</p>
-                    </div>
-                    <div class="col sm12 m6">
-                      <p>Markas Besar : ${t.venue}</p>
-                      <p>Warna Klub : ${t.clubColors}</p>
-                      <p>Website : ${t.website}</p>
+
+      if (teams.length !== 0) {
+        teams.forEach(t => {
+          html += `
+            <div class="row">
+              <div class="col s12 m12">
+                <div class="card">
+                  <div class="card-image grey lighten-4">
+                    <img src="${t.crestUrl}" class="teams-card">
+                    <span class="card-title black-text">${t.name}</span>
+                  </div>
+                  <div class="card-content black-text">
+                    <div class="row">
+                      <div class="col sm12 m6">
+                        <p>Nama : ${t.name}</p>
+                        <p>Didirikan : ${t.founded}</p>
+                        <p>Alamat : ${t.address}</p>
+                        <p>Email : ${t.email}</p>
+                        <p>Telepon : ${t.founded}</p>
+                      </div>
+                      <div class="col sm12 m6">
+                        <p>Markas Besar : ${t.venue}</p>
+                        <p>Warna Klub : ${t.clubColors}</p>
+                        <p>Website : ${t.website}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="card-action">
-                  <a href="#team?id=${t.id}&saved=true" class="waves-effect waves-light btn team-detail"> Detail Tim</a>
+                  <div class="card-action">
+                    <a href="#team?id=${t.id}&saved=true" class="waves-effect waves-light btn team-detail"> Detail Tim</a>
+                  </div>
                 </div>
               </div>
             </div>
+          `
+        })
+      } else {
+        html = `
+          <div class="row">
+            <div class="col s12 m12">
+              <h1>Tidak ada tim yang difavoritkan</h1>
+            </div>
           </div>
         `
-      })
+      }
 
       document.getElementById('favorite-teams').innerHTML = html
       onClick('.team-detail')
