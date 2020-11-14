@@ -51,9 +51,11 @@
   height: 25px !important;
 }
 
-
 @media only screen and (max-width: 768px) {
   .brand-logo {
     font-size: 1.5rem !important;
+  }
+  .custom-modal-content {
+    margin-top: 80px;
   }
 }

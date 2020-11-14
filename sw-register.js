@@ -1,3 +1,4 @@
+/* global updateOnlineStatus */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
@@ -8,36 +9,37 @@ if ('serviceWorker' in navigator) {
       .catch(() => {
         console.log('Pendaftaran ServiceWorker gagal') // eslint-disable-line no-console
       })
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus)
   })
 } else {
   console.log('ServiceWorker belum didukung browser ini.') // eslint-disable-line no-console
 }
 
-if ('Notification' in window) {
-  Notification
-    .requestPermission()
-    .then(result => {
-      if (result === 'denied') {
-        console.log('Fitur notifikasi tidak diijinkan.') // eslint-disable-line no-console
-        return
-      }
-
-      if (result === 'default') {
-        console.error('Pengguna menutup kotak dialog permintaan ijin.') // eslint-disable-line no-console
-        return
-      }
-
-      navigator.serviceWorker.getRegistration().then(reg => {
-        reg.showNotification('Notifikasi diijinkan!')
-      })
-
-      console.log('Fitur notifikasi diijinkan.') // eslint-disable-line no-console
-    })
-} else {
-  console.error('Browser tidak mendukung notifikasi.') // eslint-disable-line no-console
-}
-
 navigator.serviceWorker.ready.then(() => {
+  if ('Notification' in window) {
+    Notification
+      .requestPermission()
+      .then(result => {
+        if (result === 'denied') {
+          console.log('Fitur notifikasi tidak diijinkan.') // eslint-disable-line no-console
+          return
+        }
+
+        if (result === 'default') {
+          console.error('Pengguna menutup kotak dialog permintaan ijin.') // eslint-disable-line no-console
+          return
+        }
+
+        navigator.serviceWorker.getRegistration().then(reg => {
+          reg.showNotification('Notifikasi diijinkan!')
+        })
+
+        console.log('Fitur notifikasi diijinkan.') // eslint-disable-line no-console
+      })
+  } else {
+    console.error('Browser tidak mendukung notifikasi.') // eslint-disable-line no-console
+  }
   if (('PushManager' in window)) {
     navigator.serviceWorker.getRegistration().then(registration => {
       registration.pushManager.subscribe({

@@ -66,3 +66,8 @@ function urlBase64ToUint8Array (base64String) { // eslint-disable-line no-unused
   }
   return outputArray
 }
+
+function updateOnlineStatus (event) { // eslint-disable-line no-unused-vars
+  const condition = navigator.onLine ? 'Online' : 'Currently offline'
+  M.toast({ html: condition })
+}

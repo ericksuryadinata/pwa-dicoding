@@ -236,7 +236,7 @@ function getSavedTeams () {
         html = `
           <div class="row">
             <div class="col s12 m12">
-              <h1>Tidak ada tim yang difavoritkan</h1>
+              <h3>Tidak ada tim yang difavoritkan</h3>
             </div>
           </div>
         `
