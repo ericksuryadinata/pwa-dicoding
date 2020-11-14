@@ -2,7 +2,7 @@
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('sw.js')
+      .register('/pwa-dicoding/sw.js', { scope: '/pwa-dicoding/' })
       .then(() => {
         console.log('Pendaftaran ServiceWorker berhasil') // eslint-disable-line no-console
       })
