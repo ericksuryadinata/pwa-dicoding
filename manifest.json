@@ -2,7 +2,7 @@
   "name": "Premier League",
   "short_name": "Premier League",
   "description": "Premier League",
-  "start_url": "index.html",
+  "start_url": "pwa-dicoding/index.html",
   "display": "standalone",
   "background_color": "#01579b",
   "theme_color": "#01579b",
