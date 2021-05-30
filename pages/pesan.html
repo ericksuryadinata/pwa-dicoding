@@ -1,0 +1,52 @@
+<div class="container">
+  <h3 class="center-align uppercase bold">Form Pesanan</h3>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" class="validate" />
+          <label for="name">Nama</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">phone</i>
+          <input id="telepon" type="text" class="validate" />
+          <label for="telepon">Telepon</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <select class="icons" multiple>
+            <option value="" disabled>Pilih Kemasan</option>
+            <option
+              value="250"
+              data-icon="assets/image/dsultan-kering-tempe-250-gram.webp"
+            >
+              D'Sultan 250 Gram
+            </option>
+            <option
+              value="500"
+              data-icon="assets/image/dsultan-kering-tempe-500-gram.webp"
+            >
+              D'Sultan 500 Gram
+            </option>
+          </select>
+          <label>Kemasan</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <select multiple>
+            <option value="" disabled>Pilih Rasa</option>
+            <option value="original">Original Sultan</option>
+            <option value="pedas">Pedas Sultan</option>
+            <option value="extra">Extra Pedas</option>
+          </select>
+          <label>Varian Rasa</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="button">
+        Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+</div>

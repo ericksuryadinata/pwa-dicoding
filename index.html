@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="D'Sultan Kering Tempe" />
+    <title>D'Sultan Kering Tempe</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="assets/materialize/css/materialize.min.css"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="assets/css/main.css"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#01579b" />
+    <link rel="icon" type="image/png" href="assets/image/icon.png" />
+    <link rel="apple-touch-icon" href="assets/image/icon.png" />
+  </head>
+  <body>
+    <nav class="light-blue darken-4" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#beranda" class="brand-logo" id="logo-container">D'Sultan</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">
+          <i class="large material-icons">menu</i>
+        </a>
+
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+    <div id="body-content"></div>
+    <div class="fixed-action-btn">
+      <a id="shopping" href="#pesan" class="btn-floating btn-large red">
+        <i class="large material-icons">shopping_bag</i>
+      </a>
+    </div>
+    <script src="assets/materialize/js/materialize.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="sw-register.js"></script>
+  </body>
+</html>

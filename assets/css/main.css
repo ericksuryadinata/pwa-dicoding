@@ -1,0 +1,37 @@
+.img {
+  width: 100%;
+}
+.mt-1 {
+  margin-top: 1em;
+}
+
+.hero-section {
+  position: relative;
+  height: 600px;
+  background: #01579b;
+  color: #ffffff;
+  padding-top: 1em !important;
+}
+
+.svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.no-margin{
+  margin: 0 !important;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
