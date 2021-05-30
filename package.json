@@ -1,0 +1,20 @@
+{
+  "name": "submission-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint assets/js/api.js assets/js/db.js assets/js/main.js assets/js/init.js sw.js sw-register.js push.js",
+    "fix-lint": "eslint --fix assets/js/api.js assets/js/db.js assets/js/main.js assets/js/init.js sw.js sw-register.js push.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "web-push": "^3.4.4"
+  }
+}
