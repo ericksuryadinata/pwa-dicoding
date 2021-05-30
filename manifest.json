@@ -1,0 +1,37 @@
+{
+  "name": "Premier League",
+  "short_name": "Premier League",
+  "description": "Premier League",
+  "start_url": "pwa-dicoding/index.html",
+  "display": "standalone",
+  "background_color": "#01579b",
+  "theme_color": "#01579b",
+  "gcm_sender_id": "643608232988",
+  "scope": "pwa-dicoding",
+  "icons": [
+    {
+      "src": "assets/image/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/image/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/image/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/image/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
